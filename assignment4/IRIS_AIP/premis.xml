@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<premis:premis xmlns:premis="http://www.loc.gov/standards/premis">
+  
+  <!-- Object info -->
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>1100188708</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>iris.h5</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:objectCharacteristics>
+      <premis:compositionLevel>0</premis:compositionLevel>
+      <premis:fixity>
+        <premis:messageDigestAlgorithm>SHA-256</premis:messageDigestAlgorithm>
+        <premis:messageDigest>467a1505d27c9659c32ac59f25ed47811f242af459afb53adbed82317571210d</premis:messageDigest>
+      </premis:fixity>
+      <premis:size>22616</premis:size>
+      <premis:format>
+        <premis:formatDesignation>
+          <premis:formatName>HDF5</premis:formatName>
+          <premis:formatRegistry>
+            <premis:formatRegistryKey>application/x-hdf5</premis:formatRegistryKey>
+          </premis:formatRegistry>
+        </premis:formatDesignation>
+      </premis:format>
+    </premis:objectCharacteristics>
+  </premis:object>
+
+  <!-- Event info -->
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>1100188708</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>IRIS_CONVERSION_11_19_2025</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>format conversion</premis:eventType>
+    <premis:eventDateTime>2025-11-19T00:00:00Z</premis:eventDateTime>
+    <premis:eventDetail>Converted metadata and other data into HDF5 using Python and other modules.</premis:eventDetail>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>software</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>Python, pandas (dataframes), h5py (I/O), ucimlrepo (importing dataset)</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+  </premis:event>
+
+  <!-- Agent info-->
+  <premis:agent>
+    <premis:agentIdentifier>
+      <premis:agentIdentifierType>1100188708</premis:agentIdentifierType>
+      <premis:agentIdentifierValue>conversion.py</premis:agentIdentifierValue>
+    </premis:agentIdentifier>
+    <premis:agentName>Iris conversion script (conversion.py)</premis:agentName>
+    <premis:agentType>software</premis:agentType>
+  </premis:agent>
+</premis:premis>

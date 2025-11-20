@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:mets="http://www.loc.gov/METS/"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           xmlns:mods="http://www.loc.gov/mods/v3"
+           OBJID="AMZN_AIP"
+           TYPE="AIP">
+
+  <!-- METS header -->
+  <mets:metsHdr CREATEDATE="2025-11-19T00:00:00Z">
+    <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
+      <mets:name>AMZN HDF5 Conversion Tool</mets:name>
+    </mets:agent>
+  </mets:metsHdr>
+
+  <!-- Descriptive metadata -->
+  <mets:dmdSec ID="dmd001">
+    <mets:mdWrap MDTYPE="MODS">
+      <mets:xmlData>
+        <mods:mods>
+          <mods:titleInfo>
+            <mods:title>Amazon (AMZN) Historical Stock Dataset (HDF5 AIP)</mods:title>
+          </mods:titleInfo>
+          <mods:name type="personal">
+            <mods:namePart>Timothy Grashaw</mods:namePart>
+            <mods:role><mods:roleTerm type="text">creator</mods:roleTerm></mods:role>
+          </mods:name>
+          <mods:name type="personal">
+            <mods:namePart>Alex Litchfield</mods:namePart>
+            <mods:role><mods:roleTerm type="text">contributor</mods:roleTerm></mods:role>
+          </mods:name>
+          <mods:name type="personal">
+            <mods:namePart>Ruikang Lin</mods:namePart>
+            <mods:role><mods:roleTerm type="text">contributor</mods:roleTerm></mods:role>
+          </mods:name>
+          <mods:abstract>Historical stock prices for Amazon that were converted from CSV to a single HDF5 object.</mods:abstract>
+          <mods:originInfo>
+            <mods:publisher>Kaggle (JacksonCrow dataset)</mods:publisher>
+            <mods:dateIssued>2020</mods:dateIssued>
+          </mods:originInfo>
+          <mods:identifier type="doi">https://doi.org/10.34740/kaggle/dsv/1054465</mods:identifier>
+          <mods:location>
+            <mods:url>https://www.kaggle.com/datasets/jacksoncrow/stock-market-dataset</mods:url>
+          </mods:location>
+          <mods:note>HDF5 file includes datasets for Date, Open, High, Low, Close, Adj Close, Volume.</mods:note>
+        </mods:mods>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+
+  <!-- Administrative metadata -->
+  <mets:amdSec ID="amd001">
+    <mets:techMD ID="tech001">
+      <mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="PREMIS">
+        <mets:xmlData>
+          <linkingMetadata><metadataRef href="premis.xml" /></linkingMetadata>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:techMD>
+  </mets:amdSec>
+
+  <!-- Content and Documentation info -->
+  <mets:fileSec>
+    <mets:fileGrp USE="CONTENT">
+      <mets:file ID="f1" MIMETYPE="application/x-hdf5" CHECKSUM="a110485814d460542da84e725183834fc05dced387a48993b5671311d6f58b66" CHECKSUMTYPE="SHA-256">
+        <mets:FLocat LOCTYPE="URL">AMZN.h5</mets:FLocat>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="DOCUMENTATION">
+      <mets:file ID="f2" MIMETYPE="text/plain" CHECKSUM="45c595496a1eebc68d3784b290da4ccfb3f5ee139cb0834cd43187935cde61f5" CHECKSUMTYPE="SHA-256">
+        <mets:FLocat LOCTYPE="URL">README.txt</mets:FLocat>
+      </mets:file>
+      <mets:file ID="f3" MIMETYPE="text/xml" CHECKSUM="eeb1e017da31ea662eb6ab734c9aae01157a483818ef210b5740bae52c3f3966" CHECKSUMTYPE="SHA-256">
+        <mets:FLocat LOCTYPE="URL">premis.xml</mets:FLocat>
+      </mets:file>
+      <mets:file ID="f4" MIMETYPE="text/plain" CHECKSUM="c06fbc684251332d21e4df946e5276aa314a3e873da474bc0ec4235c12ae1fb5" CHECKSUMTYPE="SHA-256">
+        <mets:FLocat LOCTYPE="URL">manifest.txt</mets:FLocat>
+      </mets:file>
+    </mets:fileGrp>
+  </mets:fileSec>
+
+  <!-- Structural map -->
+  <mets:structMap TYPE="physical">
+    <mets:div LABEL="AMZN_AIP">
+      <mets:div LABEL="content" TYPE="HDF5">
+        <mets:fptr FILEID="f1"/>
+      </mets:div>
+      <mets:div LABEL="documentation" TYPE="TEXT">
+        <mets:fptr FILEID="f2"/>
+        <mets:fptr FILEID="f3"/>
+        <mets:fptr FILEID="f4"/>
+      </mets:div>
+    </mets:div>
+  </mets:structMap>
+
+</mets:mets>

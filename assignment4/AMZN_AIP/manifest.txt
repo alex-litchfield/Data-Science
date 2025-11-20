@@ -1,0 +1,8 @@
+manifest.txt (SHA-256 checksums)
+----------------------------------
+# Format: <hex-sha256>  <filename>
+a110485814d460542da84e725183834fc05dced387a48993b5671311d6f58b66  AMZN.h5
+e8e2c503227ad0633b7bd24fd48e90c2749128350b86f565bc80cd622f3866bd  METS.xml
+45c595496a1eebc68d3784b290da4ccfb3f5ee139cb0834cd43187935cde61f5  README.txt
+eeb1e017da31ea662eb6ab734c9aae01157a483818ef210b5740bae52c3f3966  premis.xml
+c06fbc684251332d21e4df946e5276aa314a3e873da474bc0ec4235c12ae1fb5 manifest.txt

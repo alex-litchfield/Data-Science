@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:mets="http://www.loc.gov/METS/"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           xmlns:mods="http://www.loc.gov/mods/v3"
+           OBJID="IRIS_AIP"
+           TYPE="AIP">
+
+  <!-- METS header -->
+  <mets:metsHdr CREATEDATE="2025-11-19T00:00:00Z">
+    <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
+      <mets:name>Iris HDF5 Conversion Tool</mets:name>
+    </mets:agent>
+  </mets:metsHdr>
+
+  <!-- Descriptive metadata -->
+  <mets:dmdSec ID="dmd001">
+    <mets:mdWrap MDTYPE="MODS">
+      <mets:xmlData>
+        <mods:mods>
+          <mods:titleInfo>
+            <mods:title>Iris Dataset (Fisher 1936) — HDF5 Archival Information Package</mods:title>
+          </mods:titleInfo>
+          <mods:name type="personal">
+            <mods:namePart>R. A. Fisher</mods:namePart>
+            <mods:role><mods:roleTerm type="text">original creator</mods:roleTerm></mods:role>
+          </mods:name>
+          <mods:name type="organization">
+            <mods:namePart>UCI Machine Learning Repository</mods:namePart>
+            <mods:role><mods:roleTerm type="text">distributor</mods:roleTerm></mods:role>
+          </mods:name>
+          <mods:abstract>
+            The classic Iris dataset contains 150 samples of iris flowers, including
+            sepal length, sepal width, petal length, petal width, and species.
+            It is converted from UCI ML Repository format to a single HDF5 file.
+          </mods:abstract>
+          <mods:originInfo>
+            <mods:publisher>UCI Machine Learning Repository</mods:publisher>
+            <mods:dateIssued>1936</mods:dateIssued>
+          </mods:originInfo>
+          <mods:identifier type="doi">10.24432/C56C76</mods:identifier>
+          <mods:location>
+            <mods:url>https://archive.ics.uci.edu/ml/datasets/iris</mods:url>
+          </mods:location>
+          <mods:note>HDF5 includes datasets for sepal_length, sepal_width, petal_length, petal_width, species.</mods:note>
+        </mods:mods>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+
+  <!-- Administrative metadata -->
+  <mets:amdSec ID="amd001">
+    <mets:techMD ID="tech001">
+      <mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="PREMIS">
+        <mets:xmlData>
+          <linkingMetadata><metadataRef href="premis.xml" /></linkingMetadata>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:techMD>
+  </mets:amdSec>
+
+  <!-- File section -->
+  <mets:fileSec>
+    <mets:fileGrp USE="CONTENT">
+      <mets:file ID="f1" MIMETYPE="application/x-hdf5" CHECKSUM="467a1505d27c9659c32ac59f25ed47811f242af459afb53adbed82317571210d" CHECKSUMTYPE="SHA-256">
+        <mets:FLocat LOCTYPE="URL">iris.h5</mets:FLocat>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="DOCUMENTATION">
+      <mets:file ID="f2" MIMETYPE="text/plain" CHECKSUM="c01bddd10847788214d5491f710b61496fc54d8c44777565777de932b88bdc6b" CHECKSUMTYPE="SHA-256">
+        <mets:FLocat LOCTYPE="URL">README.txt</mets:FLocat>
+      </mets:file>
+      <mets:file ID="f3" MIMETYPE="text/xml"CHECKSUM="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" CHECKSUMTYPE="SHA-256">
+        <mets:FLocat LOCTYPE="URL">premis.xml</mets:FLocat>
+      </mets:file>
+      <mets:file ID="f4" MIMETYPE="text/plain"CHECKSUM="0c25577243b68a16d6ba63cfe4945e3daa1297657e7e36d8271e9c86e4dba092" CHECKSUMTYPE="SHA-256">
+        <mets:FLocat LOCTYPE="URL">manifest.txt</mets:FLocat>
+      </mets:file>
+    </mets:fileGrp>
+  </mets:fileSec>
+
+  <!-- Structure map -->
+  <mets:structMap TYPE="physical">
+    <mets:div LABEL="IRIS_AIP">
+      <mets:div LABEL="content" TYPE="HDF5">
+        <mets:fptr FILEID="f1"/>
+      </mets:div>
+      <mets:div LABEL="documentation" TYPE="TEXT">
+        <mets:fptr FILEID="f2"/>
+        <mets:fptr FILEID="f3"/>
+        <mets:fptr FILEID="f4"/>
+      </mets:div>
+    </mets:div>
+  </mets:structMap>
+
+</mets:mets>

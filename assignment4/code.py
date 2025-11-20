@@ -87,6 +87,6 @@ buildFile("iris.h5", featuresAndTargets, metadataDictionary, variablesDictionary
 printFileContents("iris.h5")
 
 # Converting AMZN.csv to hdf5
-AMZNdata, AMZNmetadata = fetchAMZN("../assignment2/AMZN.csv", "../assignment2/metadata.yaml")
+AMZNdata, AMZNmetadata = fetchAMZN("./AMZN_AIP/AMZN.csv", "./AMZN_AIP/metadata.yaml")
 buildFile("AMZN.h5", AMZNdata, AMZNmetadata, None)
 printFileContents("AMZN.h5")
